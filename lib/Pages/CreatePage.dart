@@ -3,7 +3,19 @@ import 'package:flutter/rendering.dart';
 import 'package:starbhak/Pages/AddPages.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:starbhak/main.dart';
+
+
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+Future<void> main() async {
+  await Supabase.initialize(
+    url: 'https://stqdcprtjuisggemhbvx.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cWRjcHJ0anVpc2dnZW1oYnZ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzA5NjU5NTQsImV4cCI6MjA0NjU0MTk1NH0.vry5KPwUMYHb1UfVL9cGAUZrtoLrCKAByLFMxglykf4',
+  );
+  runApp(Myapp());
+}
+        
 
 class CreatePage extends StatelessWidget {
   @override
@@ -97,10 +109,7 @@ class _ProductFormState extends State<ProductForm> {
               alignment: Alignment.center, 
               child: Text(
                 "Create",
-                style: GoogleFonts.inter(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+                
               ),
             ),
             SizedBox(height: 40),

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:starbhak/Widget/AllfoodWidget.dart';
 import 'package:starbhak/Widget/AppBarWidget.dart';
 import 'package:starbhak/widget/MenuFoodWidget.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
